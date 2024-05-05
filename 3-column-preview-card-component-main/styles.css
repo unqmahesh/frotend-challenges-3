@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+:root{
+      --p-clr-bo : hsl(31, 77%, 52%);
+      --p-clr-dc : hsl(184, 100%, 22%);
+      --p-clr-vdc :  hsl(179, 100%, 13%);
+
+      --n-clr-tw : hsla(0, 0%, 100%, 0.75);
+      --n-clr-vlg : hsl(0, 0%, 95%);
+
+      font-size: 15px;
+}
+
+/* Resets */
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+/* typography */
+h1{
+      font-family: 'Big Shoulders Display';
+      color: var(--n-clr-vlg);
+      font-weight: 500;
+      font-size: 2.2rem;
+}
+
+p, button{
+      font-family: 'Lexend Deca';
+      color: var(--n-clr-tw);
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+}
+
+
+/* layout */
+
+body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+}
+
+.preview{
+      width: 90%;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+}
+
+.preview__card{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.7rem 2.3rem 1.7rem 1.7rem;
+      gap: 1.4rem;
+}
+
+.preview__card--sedans{
+      background-color: var(--p-clr-bo);
+      border-radius: 5px 5px 0 0;
+}
+.preview__card--sedans button{
+      color: var(--p-clr-bo);
+}
+
+.preview__card--suv{
+      background-color: var(--p-clr-dc);
+}
+.preview__card--suv button{
+      color: var(--p-clr-dc);
+}
+
+.preview__card--luxury{
+      background-color: var(--p-clr-vdc);
+      border-radius: 0 0 5px 5px;
+
+}
+.preview__card--luxury button{
+      color: var(--p-clr-vdc);
+}
+
+.preview__card img{
+      width: 2.5rem;
+}
+
+button{
+      margin-top: 2rem;
+      padding: 0.6rem 1rem;
+      background-color: white;
+      width: fit-content;
+      border-radius: 24px;
+      outline: none;
+      border: none;
+}
+
+.button:hover{
+      border: 2px solid white;
+      background-color: transparent;
+      color: var(--n-clr-tw)
+}
+
+@media (width > 475px){
+      .preview{
+            flex-direction: row;
+            max-width: 700px;
+      }
+      .preview__card--sedans{
+            border-radius: 5px 0 0 5px;
+      }
+      .preview__card--luxury{
+            border-radius: 0 5px 5px 0;
+      }
+
+}

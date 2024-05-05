@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+
+      --p-clr : hsl(292, 16%, 49%);
+
+      --n-clr-w : hsl(0, 0%, 100%);
+      --n-clr-lp : hsl(275, 100%, 97%);
+      --n-clr-gp : hsl(292, 42%, 14%); 
+
+      font-family: 'Work Sans', sans-serif;
+      font-size: 14px;
+}
+
+
+/* resets */
+
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+body{
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('./assets/images/background-pattern-mobile.svg');
+      background-color: var(--n-clr-lp);
+      background-repeat: no-repeat;
+      background-size: contain;
+}
+
+.faq-card{
+      width: 80%;
+      max-width: 550px;
+      background-color: var(--n-clr-w);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+
+}
+
+.faq-card__heading{
+      display: flex;
+      gap : 1rem;
+      font-size: 1.6rem;
+}
+
+.faq-card__heading img{
+      width: 2em;
+}
+
+.faq-card__heading h1{
+      font-size: 1.8em;
+      color: var(--n-clr-gp);
+}
+
+
+.faq-card__faq{
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--n-clr-lp) ;
+      cursor: pointer;
+}
+
+.faq__question{
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--n-clr-gp);
+}
+
+
+.faq__question p{
+      vertical-align: center;
+      background-color: red;
+}
+
+.faq__question span img{
+     height: 1.5rem;
+}
+
+.faq__answer{
+      margin-top: 0.5rem;
+      max-height: 0px;
+      height: 0;
+      overflow: hidden;
+      color: var(--p-clr);
+      letter-spacing: 0.2px;
+      line-height: 1.4rem;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: max-height 2s linear 0s, height 2s linear 0s;
+}
+
+.faq__answer--active{
+      max-height: 1000px; 
+      height: auto;
+}
+
+@media (width > 500px) {
+      body{
+            background-image: url('./assets/images/background-pattern-desktop.svg')
+      };
+}
